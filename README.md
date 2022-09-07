@@ -1,2 +1,4 @@
-# one_page
-Generic One Page Template created with Symfony 6.1
+# Symfony One Page Template
+
+## Want a fast One Page template for Symfony?
+#### I got you ;)
