@@ -2,10 +2,11 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class IndexController
+class IndexController extends AbstractController
 {
 
     #[Route("/")]
@@ -13,9 +14,9 @@ class IndexController
 
         $text = "Hello World";
 
-        return new Response(
-            "<html><body><p>" . $text . "</p></body></html>"
-        );
+        return $this->render("index/home.html.twig", [
+            "text" => $text
+        ]);
 
     }
 

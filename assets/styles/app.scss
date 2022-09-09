@@ -1,0 +1,152 @@
+// Custom variables
+ // Bg
+$bg-color: #f6f6f6;
+$dot-color: rgba(#000000, .4);
+$dot-size: 1px;
+$dot-space: 22px;
+  // Font
+$font-size: 1em;
+$font-family: "Raleway", sans-serif;
+$navbar-font-color: #2a2a2a;
+  // Button
+$btn-font-color: #ffffff;
+
+// Override Bootstrap Variables
+  // General
+$body-color: #1b1b1b;
+$font-family-base: $font-family;
+  //Navbar
+$navbar-brand-font-size: 1rem;
+$navbar-light-brand-color: $navbar-font-color;
+$navbar-light-color: $navbar-font-color;
+$nav-link-font-size: 1.25rem;
+$nav-link-font-weight: bold;
+$navbar-nav-link-padding-x: 1.5625rem;
+$dropdown-min-width: 1rem;
+  // Buttons
+$btn-border-radius: 0;
+$primary: #27a9f9;
+$btn-padding-x: 4rem;
+$btn-padding-y: 1.125rem;
+
+
+
+
+
+
+// Imports
+@import "~bootstrap/scss/bootstrap";
+
+html, body{
+  font-size: $font-size;
+}
+
+body{
+background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
+  background-size: $dot-space $dot-space;
+}
+
+// Header
+header {
+
+  height: 90vh;
+  position: relative;
+
+  .navbar{
+
+    .navbar-brand{
+
+      font-size: $font-size;
+
+      .navbar-logo-text{
+        font-size: 1.125rem;
+        margin-right: 1rem;
+        font-weight: 500;
+      }
+
+    }
+
+    #nav-language{
+
+      img{
+        height: 41px;
+      }
+
+      .dropdown-toggle{
+
+        &:after{
+          content: none;
+        }
+
+      }
+
+      .dropdown-menu{
+
+        left: 50%;
+        transform: translateX(-50%);
+        background: transparent;
+        border: none;
+        margin-top: 0;
+        padding: 0;
+
+        .dropdown-item{
+          padding: 0;
+        }
+
+      }
+
+
+    }
+
+  }
+
+  .header-text{
+
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+
+    p{
+
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 200%;
+
+      span{
+
+        font-weight: 800;
+
+        &:nth-child(1){
+          font-size: 4.75rem;
+        }
+
+        &:nth-child(2){
+          font-size: 4.375rem;
+        }
+
+        &:nth-child(3){
+          font-size: 4.625rem;
+        }
+
+        &:nth-child(4){
+          font-size: 4.25rem;
+        }
+
+      }
+
+    }
+
+    .btn{
+
+      font-size: 1.625rem;
+      color: $btn-font-color;
+      font-weight: 800;
+
+    }
+
+  }
+
+}
+
