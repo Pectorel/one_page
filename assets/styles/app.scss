@@ -150,3 +150,25 @@ header {
 
 }
 
+// First section
+#introduction{
+  padding: 4rem 0;
+  background: #27A9F9;
+  color: #ffffff;
+
+  *{
+    color: inherit;
+  }
+
+  h2{
+    font-weight: 800;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.625rem;
+  }
+
+}
+
+
